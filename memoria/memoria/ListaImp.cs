@@ -157,6 +157,7 @@ namespace computadora
                 int actual = posterior(pos-1);
                 _mem.delete_espacio(actual);
             }
+            _longitud--;
         }
 
         public override bool vacia()
