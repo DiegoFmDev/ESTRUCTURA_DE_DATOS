@@ -91,12 +91,21 @@ namespace computadora
         }
         public override string obtener_dato(int dir, int lugar)
         {
+            if (dir < 0 || dir >= mem.Length)
+                return null;  // Pila vacía o índice inválido
+
+            if (lugar < 0)
+                return null;  // Lugar negativo no tiene sentido
+
             int z = dir;
 
             for (int i = 0; i < lugar; i++)
             {
+                if (mem[z].link == -1)
+                    return null;  // fin de la lista
                 z = mem[z].link;
             }
+
             return mem[z].dato;
         }
 

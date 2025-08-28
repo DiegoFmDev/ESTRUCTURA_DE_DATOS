@@ -1,18 +1,21 @@
-﻿using System;
+﻿using computadora;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace computadora
+namespace EstructuraDeDatos
 {
-    public abstract class PilaAbs
+    public abstract class PilaConCola
     {
-        protected ListaImp _lista;
 
-        public PilaAbs(MemoriaImp mem)
+        protected PilaImp _lista;
+
+        public PilaConCola(MemoriaImp mem)
         {
-            _lista = new ListaImp(mem);
+            _lista = new PilaImp(mem);
         }
 
         public abstract bool vacia();
@@ -20,7 +23,5 @@ namespace computadora
         public abstract void meter(string dato);
         public abstract string sacar();
         public abstract string mostrar();
-        public abstract int cantidad();
-
     }
 }

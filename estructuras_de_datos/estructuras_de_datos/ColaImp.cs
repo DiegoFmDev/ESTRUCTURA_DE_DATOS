@@ -14,12 +14,12 @@ namespace computadora
 
         public override int cantidad()
         {
-           return _lista.ver_longitud();
+            return _lista.ver_longitud();
         }
 
         public override string mostrar_cola()
         {
-            return _lista.mostrar_Lista();
+            return _lista.mostrar_lista();
         }
 
         public override void poner(string dato)
@@ -38,7 +38,7 @@ namespace computadora
 
         public override string sacar()
         {
-            if(vacia())
+            if (vacia())
             {
                 return "cola vacia";
             }

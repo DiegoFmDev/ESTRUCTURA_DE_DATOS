@@ -19,5 +19,6 @@ namespace computadora
         public abstract void poner(string dato);
         public abstract string sacar();
         public abstract string mostrar_cola();
+        public abstract int cantidad();
     }
 }

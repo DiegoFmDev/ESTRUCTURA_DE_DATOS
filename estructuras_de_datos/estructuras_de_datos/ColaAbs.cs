@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace computadora
 {
-    public abstract class PilaAbs
+    public abstract class ColaAbs
     {
         protected ListaImp _lista;
 
-        public PilaAbs(MemoriaImp mem)
-        {
-            _lista = new ListaImp(mem);
+        public ColaAbs(MemoriaImp mem) {
+            _lista = new ListaImp(mem);            
         }
 
         public abstract bool vacia();
-        public abstract string cima();
-        public abstract void meter(string dato);
+        public abstract string primero();
+        public abstract void poner(string dato);
         public abstract string sacar();
-        public abstract string mostrar();
         public abstract int cantidad();
-
+        public abstract string mostrar_cola();
     }
 }

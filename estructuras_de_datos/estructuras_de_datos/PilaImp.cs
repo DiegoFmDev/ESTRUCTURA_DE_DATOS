@@ -11,39 +11,45 @@ namespace computadora
         public PilaImp(MemoriaImp mem) : base(mem)
         {
         }
+
+        public override int cantidad()
+        {
+            return _lista.ver_longitud();
+        }
+
         public override string cima()
         {
             if (vacia())
             {
-                return ("Pila vacia");
+                return "pila vacia";
             }
             return _lista.mostrar_dato(_lista.ver_longitud()-1);
         }
-        public override string mostrar()
-        {
-            return _lista.mostrar_Lista();
-        }
-        public override bool vacia()
-        {
-            return _lista.vacia();
-        }
+
         public override void meter(string dato)
         {
             _lista.insertar(_lista.ver_longitud(), dato);
         }
+
+        public override string mostrar()
+        {
+            return _lista.mostrar_lista();
+        }
+
         public override string sacar()
         {
             if (vacia())
             {
-                return("Pila vacia");
+                return "pila vacia";
             }
-            string respuesta = _lista.mostrar_dato(_lista.ver_longitud()-1);
-            _lista.suprimir(_lista.ver_longitud()-1);
+            string respuesta = _lista.mostrar_dato(_lista.ver_longitud() - 1);
+            _lista.suprimir(_lista.ver_longitud() - 1);
             return respuesta;
         }
-        public override int cantidad()
+
+        public override bool vacia()
         {
-            return _lista.ver_longitud();
+            return _lista.vacia();
         }
     }
 }
